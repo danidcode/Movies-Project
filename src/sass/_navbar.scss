@@ -1,0 +1,14 @@
+@import 'variables';
+
+.navbar{
+z-index: 10000;
+position: fixed;
+top: 0px;
+width: 100%;
+background-color: azure;
+
+.nav_links{
+    text-decoration: none;
+    padding-inline-start: 1rem;
+}
+}

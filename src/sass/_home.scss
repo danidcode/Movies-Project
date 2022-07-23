@@ -1,7 +1,10 @@
 @import 'variables';
 
 .homeContainer{
-height: 85vh;
-width: 95%;
+width: 80%;
 background-color: rgb(67, 78, 78);
+margin-top: 5rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
 }

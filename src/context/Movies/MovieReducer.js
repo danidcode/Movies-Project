@@ -11,7 +11,7 @@ export default (state, action) => {
       };
     case GET_MOVIE:
       return {
-        movies: [...state.movies, payload],
+        selectedMovie: payload,
       };
   }
 };

@@ -24,10 +24,9 @@ const Details = () => {
          {/* Conditional rendering because selectedMovie will be undefined until the request to the API ends */}
        {isLoading ? <Spinner animation="border" variant="secondary" /> :    
        
-       <div className="details-movie_image_div">
-       <img src={IMG_API+selectedMovie.poster_path} alt="" className="details-movie_image"/>
-       </div>
-       
+      <><div className="details-movie_image_div">
+          <img src={IMG_API + selectedMovie.poster_path} alt="" className="details-movie_image" />
+        </div><div className="details-title"> <span className="details-title_span">{selectedMovie.title}</span> </div></>
        }
       </div>
   );

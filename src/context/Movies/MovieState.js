@@ -27,7 +27,9 @@ const MovieState = (props) => {
       `https://api.themoviedb.org/3/movie/${id}?api_key=3416eebbeee3a8c56f4c2d69581980d4`
     );
 
-    
+    // res.data.genres.map((gen)=>{
+    //   console.log(gen.name)
+    // })
     dispatch({
       type: "GET_MOVIE",
       payload: res.data,

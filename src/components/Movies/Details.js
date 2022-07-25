@@ -30,6 +30,9 @@ const Details = () => {
             <div className="details-genders_cards"> {gen.name} </div>
           )
         })} </div> 
+        <div className="details-overview">
+             <span className="details-overview_span">{selectedMovie.overview}</span>
+        </div>
      </div>
        </div> </>
        }

@@ -12,7 +12,8 @@ function App() {
       <Navbar/>
       <Routes>
       <Route exact  path='/' element={<Home/>}/>
-      <Route exact  path='/details/:id' element={<Details/>}/>
+       {/* Passing the id of the movie as a parameter at url */}
+      <Route exact  path='/details/:id' element={<Details/>}/> 
       </Routes>
     </div>
     </Router>

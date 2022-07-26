@@ -3,7 +3,6 @@
 .detailsContainer {
   width: 90%;
 
-  // background-color: rgb(13, 26, 26);
   margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
@@ -22,12 +21,12 @@
   }
 
   .details {
-      display: flex;
-      width: 75%;
-      height: 100%;
-      flex-wrap: wrap;
-      justify-content: center;
-      flex-direction: column;
+    display: flex;
+    width: 75%;
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
     &-title {
       width: 100%;
       margin-top: 1rem;
@@ -40,59 +39,57 @@
         font-size: 2rem;
       }
     }
-    &-genders{
-        display: flex;
-        flex-direction: row;
-        align-self: top;
-        margin-bottom: auto;
-        justify-content: center;
-        margin-top: 3rem;
-        flex-wrap: wrap;
+    &-genders {
+      display: flex;
+      flex-direction: row;
+      align-self: top;
+      margin-bottom: auto;
+      justify-content: center;
+      margin-top: 3rem;
+      flex-wrap: wrap;
 
-        &_cards{
-          border: 1px rgb(255, 251, 251) solid;
-          border-radius: 999px;
-          padding: 6px 15px 6px 15px;
-          font-size: 1rem;
-          font-family: $poppins;
-          color: aliceblue;
-          margin-inline: 0.5rem;
-          margin-top: 1rem;
-        }
+      &_cards {
+        border: 1px rgb(255, 251, 251) solid;
+        border-radius: 999px;
+        padding: 6px 15px 6px 15px;
+        font-size: 1rem;
+        font-family: $poppins;
+        color: aliceblue;
+        margin-inline: 0.5rem;
+        margin-top: 1rem;
+      }
     }
-    &-overview{
+    &-overview {
       display: flex;
       flex-wrap: wrap;
       width: 100%;
       display: flex;
-      padding: 5rem 5rem 0 5rem;
-      
-      &_span{
+      padding: 3rem 3rem 0 5rem;
+
+      &_span {
         font-family: $poppins;
         font-size: 1.2rem;
-        color: rgb(231, 231, 231); 
+        color: rgb(231, 231, 231);
         text-align: justify;
         text-justify: inter-word;
-        
       }
-
     }
-    &-popularity-date{
+    &-popularity-date {
       display: flex;
       padding-left: 2rem;
       padding-right: 2rem;
       margin-top: 200px;
       padding-bottom: 1rem;
-      .details-popularity_span{
-        color: rgb(231, 231, 231); 
+      .details-popularity_span {
+        color: rgb(231, 231, 231);
         border-radius: 999px;
         padding: 6px 15px 6px 15px;
         font-size: 1rem;
         font-family: $poppins;
         background-color: rgb(212, 14, 14);
       }
-      .details-date_span{
-        color: rgb(231, 231, 231); 
+      .details-date_span {
+        color: rgb(231, 231, 231);
         border-radius: 999px;
         padding: 6px 15px 6px 15px;
         font-size: 1rem;
@@ -101,9 +98,7 @@
       }
     }
   }
-  
 }
-
 
 // @media (max-width: $sm-max) {
 //   .details-popularity-date{
@@ -114,28 +109,35 @@
 // Breakpoints
 // Extra extra large
 @media (min-width: $xxl-min) {
-  .details-popularity-date{
-    margin-top: 300px!important;
+  .details-popularity-date {
+    margin-top: 300px !important;
   }
 }
 
 // Extra large
 @media (min-width: $xl-min) and (max-width: $xl-max) {
-  .details-popularity-date{
-    margin-top: 200px!important;
+  .detailsContainer{
+    margin-top: 7rem!important;
+  }
+  .details-popularity-date {
+    margin-top: 200px !important;
   }
 }
 
 // Large
 @media (min-width: $lg-min) and (max-width: $lg-max) {
-  .details-popularity-date{
-    margin-top: 200px!important;
+  .detailsContainer{
+    margin-top: 7rem!important;
+  }
+  .details-popularity-date {
+    margin-top: 200px !important;
   }
 }
 
 // Medium
-@media (min-width: $md-min) and (max-width: $md-max) and (orientation: portrait) {
-  .detailsContainer{
+@media (min-width: $md-min) and (max-width: $md-max) {
+  .detailsContainer {
+    margin-top: 7rem!important;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -143,45 +145,44 @@
     .details-movie_image_div {
       width: 70% !important;
       max-height: 40%;
-
     }
-    .details{
-      width: 100%!important;
+    .details {
+      width: 100% !important;
       height: 55%;
-      &-title{
-        &_span{
-          font-size: 1.6rem!important;
+      &-title {
+        &_span {
+          font-size: 1.6rem !important;
         }
       }
-      &-genders{
-        width: 100%!important;
-        display: flex!important;
-        flex-wrap: wrap!important;  
-        &_cards{
+      &-genders {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        &_cards {
           padding: 0.5rem 0.5rem 0.5rem 0.5rem;
           margin: 0.4rem;
         }
       }
-      &-overview{
-        padding: 0!important;
-        
+      &-overview {
+        padding: 0 !important;
+
         flex-wrap: wrap;
         display: flex;
         height: 50%;
         width: 100%;
 
-        &_span{
-        font-size: 1.1rem;
-        
-      }
+        &_span {
+          font-size: 1.1rem;
+        }
       }
     }
   }
 }
 
 // Small
-@media (min-width: $sm-min) and (max-width: $sm-max) and (orientation: portrait) {
-  .detailsContainer{
+@media (min-width: $sm-min) and (max-width: $sm-max) {
+  .detailsContainer {
+    margin-top: 7rem!important;
     box-shadow: none;
     height: 100vh;
     display: flex;
@@ -190,46 +191,45 @@
     .details-movie_image_div {
       width: 70% !important;
       max-height: 40%;
-
     }
-    .details{
-      width: 100%!important;
+    .details {
+      width: 100% !important;
       height: 55%;
-      &-title{
-        &_span{
-          font-size: 1.6rem!important;
+      &-title {
+        &_span {
+          font-size: 1.6rem !important;
         }
       }
-      &-genders{
-        width: 100%!important;
-        display: flex!important;
-        flex-wrap: wrap!important; 
-        margin-top: 0!important;   
-        &_cards{
+      &-genders {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-top: 0 !important;
+        &_cards {
           padding: 0.5rem 0.5rem 0.5rem 0.5rem;
           margin: 0.4rem;
         }
       }
-      &-overview{
-        padding: 0!important;
-        
+      &-overview {
+        padding: 0 !important;
+
         flex-wrap: wrap;
         display: flex;
         height: 50%;
         width: 100%;
 
-        &_span{
-        font-size: 1.1rem;
-        
-      }
+        &_span {
+          font-size: 1.1rem;
+        }
       }
     }
   }
 }
 
 // Extra small
-@media (max-width: $xs-max) and (orientation: portrait) {
-  .detailsContainer{
+@media (max-width: $xs-max) {
+  .detailsContainer {
+    margin-top: 7rem!important;
     box-shadow: none;
     height: 100vh;
     display: flex;
@@ -238,46 +238,45 @@
     .details-movie_image_div {
       width: 70% !important;
       max-height: 40%;
-
     }
-    .details{
-      width: 100%!important;
+    .details {
+      width: 100% !important;
       height: 55%;
-      &-title{
-        &_span{
-          font-size: 1.6rem!important;
+      &-title {
+        &_span {
+          font-size: 1.6rem !important;
         }
       }
-      &-genders{
-        width: 100%!important;
-        display: flex!important;
-        flex-wrap: wrap!important;
-        margin-top: 0!important;    
-        &_cards{
+      &-genders {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-top: 0 !important;
+        &_cards {
           padding: 0.5rem 0.5rem 0.5rem 0.5rem;
           margin: 0.4rem;
         }
       }
-      &-overview{
-        padding: 0!important;
-        
+      &-overview {
+        padding: 0 !important;
+
         flex-wrap: wrap;
         display: flex;
         height: 50%;
         width: 100%;
 
-        &_span{
-        font-size: 1.1rem;
-        
-      }
+        &_span {
+          font-size: 1.1rem;
+        }
       }
     }
   }
 }
 
-@media (max-width: $md-max) and (orientation: portrait) {
-  .detailsContainer{
+@media (max-width: $md-max) {
+  .detailsContainer {
     box-shadow: none;
+    margin-top: 7rem!important;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -285,58 +284,52 @@
     .details-movie_image_div {
       width: 70% !important;
       max-height: 50%;
-
     }
-    .details{
-      width: 100%!important;
+    .details {
+      width: 100% !important;
       height: 70%;
-      &-title{
+      &-title {
         margin-bottom: 1.5rem;
-        &_span{
-          font-size: 1.6rem!important;
+        &_span {
+          font-size: 1.6rem !important;
         }
       }
-      &-genders{
+      &-genders {
         margin-bottom: 1.5rem;
-        width: 100%!important;
-        display: flex!important;
-        flex-wrap: wrap!important;
-        margin-top: 0!important;  
-        &_cards{
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        margin-top: 0 !important;
+        &_cards {
           padding: 0.5rem 0.5rem 0.5rem 0.5rem;
           margin: 0.4rem;
         }
       }
-      &-overview{
+      &-overview {
         margin-bottom: 1rem;
-        padding: 0!important;
-        
+        padding: 0 !important;
+
         flex-wrap: wrap;
         display: flex;
         height: 50%;
         width: 100%;
 
-        &_span{
-        font-size: 1.1rem;
-        
+        &_span {
+          font-size: 1.1rem;
+        }
       }
-      }
-      &-popularity-date{
-        
+      &-popularity-date {
         flex-wrap: wrap;
         display: flex;
         margin-top: 1.5rem;
         margin-bottom: 1rem;
         padding-left: 0.2rem;
         padding-right: 0.2rem;
-        .details-popularity_span{
-          
+        .details-popularity_span {
         }
-        .details-date_span{
-         
+        .details-date_span {
         }
       }
-     
     }
   }
 }

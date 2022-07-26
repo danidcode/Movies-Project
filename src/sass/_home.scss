@@ -1,47 +1,50 @@
-@import 'variables';
+@import "variables";
 
-.layout{
-    display: flex;
+.layout {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  .homeContainer {
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-    .homeContainer{
-        width: 100%;
-        // background-color: rgb(67, 78, 78);
-        margin-top: 5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        }
+    // background-color: rgb(67, 78, 78);
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 // Breakpoints
-@media (max-width: $sm-max) {}
+@media (max-width: $sm-max) {
+}
 // Extra extra large
-@media (min-width: $xxl-min) {}
+@media (min-width: $xxl-min) {
+}
 
 // Extra large
-@media (min-width: $xl-min) and (max-width: $xl-max) {}
+@media (min-width: $xl-min) and (max-width: $xl-max) {
+}
 
 // Large
-@media (min-width: $lg-min) and (max-width: $lg-max) {}
+@media (min-width: $lg-min) and (max-width: $lg-max) {
+}
 
 // Medium
-@media (min-width: $md-min) and (max-width: $md-max) {}
+@media (min-width: $md-min) and (max-width: $md-max) {
+}
 
 // Small
 @media (min-width: $sm-min) and (max-width: $sm-max) {
-    .homeContainer{
-        width: 80%!important;
-        }
+  .homeContainer {
+    width: 80% !important;
+  }
 }
 
 // Extra small
 @media (max-width: $xs-max) {
-    .homeContainer{
-        width: 80%!important;
-        }
+  .homeContainer {
+    width: 80% !important;
+  }
 }
-
- 
-

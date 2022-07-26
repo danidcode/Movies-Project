@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
 import movieContext from '../../context/Movies/MovieContext';
+import {AiOutlineEye} from 'react-icons/ai'
 const IMG_API = "https://image.tmdb.org/t/p/w500";
 const MOVIE_INFO= "https://api.themoviedb.org/3/movie/";
 const API_KEY ="?api_key=3416eebbeee3a8c56f4c2d69581980d4";
-
 
 const MovieCard = ({id,title, poster_path, release_date, popularity}) => {
 
@@ -25,7 +25,7 @@ const MovieCard = ({id,title, poster_path, release_date, popularity}) => {
       
       <div className="movie_details-content">
         {/* Passing the id to the next screen */}
-      <Link to={`details/${id}`} > View more </Link> 
+      <Link to={`details/${id}`} > View <AiOutlineEye size={25}/> </Link> 
       </div>
     </div>
   </div>

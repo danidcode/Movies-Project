@@ -1,22 +1,24 @@
-@import 'variables';
-@import 'home';
-@import 'navbar';
-@import 'details';
-@import 'card';
+@import "variables";
+@import "home";
+@import "navbar";
+@import "details";
+@import "card";
 @import "~bootstrap/scss/bootstrap";
-*{
-    box-sizing: border-box;
+@import "paginate";
+
+* {
+  box-sizing: border-box;
 }
-body{
-    margin: 0;
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.container{
-    min-height: 100vh;
-    background-color: $bg-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  min-height: 100vh;
+  background-color: $bg-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

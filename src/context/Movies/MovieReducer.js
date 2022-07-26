@@ -1,5 +1,6 @@
 import { GET_MOVIES } from "../Types";
 import { GET_MOVIE } from "../Types";
+import { SET_PAGE } from "../Types";
 
 export default (state, action) => {
   const { payload, type } = action;
@@ -12,6 +13,10 @@ export default (state, action) => {
     case GET_MOVIE:
       return {
         selectedMovie: payload,
+      };
+    case SET_PAGE:
+      return {
+        page: payload,
       };
   }
 };

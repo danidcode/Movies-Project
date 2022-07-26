@@ -33,6 +33,10 @@ const Details = () => {
         <div className="details-overview">
              <span className="details-overview_span">{selectedMovie.overview}</span>
         </div>
+        <div className="details-popularity-date">
+           <span className="details-popularity_span">Popularity: {parseInt(selectedMovie.popularity)}</span>
+           <span className="details-date_span">{selectedMovie.release_date}</span>
+        </div>
      </div>
        </div> </>
        }

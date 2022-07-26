@@ -16,7 +16,7 @@ const [isLoading, setLoading] = useState(true);
   return (
     <>
  {isLoading ? <Spinner animation="border" variant="secondary" /> :    
-    <div>
+    <div className="layout">
       <div className='homeContainer'>
         {/* Conditional rendering because movies will be undefined until the request to the API ends */}
         {movies ? movies.map((movie) => <MovieCard key={movie.id} {...movie}/>) : null}

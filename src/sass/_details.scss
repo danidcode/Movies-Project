@@ -47,6 +47,7 @@
         margin-bottom: auto;
         justify-content: center;
         margin-top: 3rem;
+        flex-wrap: wrap;
 
         &_cards{
           border: 1px rgb(255, 251, 251) solid;
@@ -56,6 +57,7 @@
           font-family: $poppins;
           color: aliceblue;
           margin-inline: 0.5rem;
+          margin-top: 1rem;
         }
     }
     &-overview{

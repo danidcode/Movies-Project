@@ -10,12 +10,12 @@ const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
      getMovies().then(setTimeout(() => {
-       setLoading(false);
-     }, 500))
+      setLoading(false);
+     }, 500));
   }, [page]);
   return (
     <>
-    {isLoading ? <Spinner animation="border" variant="secondary" /> : 
+ {isLoading ? <Spinner animation="border" variant="secondary" /> :    
     <div>
       <div className='homeContainer'>
         {/* Conditional rendering because movies will be undefined until the request to the API ends */}
@@ -23,7 +23,7 @@ const [isLoading, setLoading] = useState(true);
       </div>
       <Pagination page={page} setPage={setPage}/>
       </div>
-    }
+}
     </> 
   );
 }

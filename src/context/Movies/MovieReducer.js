@@ -3,7 +3,15 @@ import { GET_MOVIE } from "../Types";
 import { SET_PAGE } from "../Types";
 
 export default (state, action) => {
-  const { payload, type } = action;
+  let { payload, type } = action;
+
+  //Conditional to avoid a bug because of page limits
+  if (payload == 0) {
+    payload = 20;
+  } else if (payload == 21) {
+    payload = 1;
+  }
+
   switch (type) {
     case GET_MOVIES:
       return {

@@ -19,7 +19,10 @@ const MovieCard = ({id,title, poster_path, release_date, popularity}) => {
     <img src={IMG_API+poster_path} alt="" className="movie_image"/>
     <div className="movie_text-content">
       <h2 className="movie_title">{title}</h2>
-      <div className="movie_post-date">{release_date}</div>
+      <div className="movie_post"><div className="movie_post_date">{release_date}</div> <div className="movie_post_popularity"> Popularity: <span className="movie_post_popularity_span">
+        {parseInt(popularity)}</span>
+      </div></div>
+      
       <div className="movie_details-content">
         {/* Passing the id to the next screen */}
       <Link to={`details/${id}`} > View more </Link> 

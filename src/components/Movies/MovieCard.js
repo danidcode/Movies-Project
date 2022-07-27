@@ -1,14 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
-import movieContext from '../../context/Movies/MovieContext';
 import {AiOutlineEye} from 'react-icons/ai'
 const IMG_API = "https://image.tmdb.org/t/p/w500";
-const MOVIE_INFO= "https://api.themoviedb.org/3/movie/";
-const API_KEY ="?api_key=3416eebbeee3a8c56f4c2d69581980d4";
 
-const MovieCard = ({id,title, poster_path, release_date, popularity}) => {
-
-  const { movies, getMovies, getOneMovie } = useContext(movieContext);
+const MovieCard = ({id,title, poster_path, release_date, popularity}) => { 
   return (
     
       <div className='cards'>

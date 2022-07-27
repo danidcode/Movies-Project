@@ -6,7 +6,9 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MovieState from './context/Movies/MovieState';
 function App() {
   return (
-    <MovieState>
+    // All the code will be inside the global context
+    // this is how the components can communicate with each other
+    <MovieState> 
     <Router>
     <div className="container">
       <Navbar/>

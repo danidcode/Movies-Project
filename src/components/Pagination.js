@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+
 const Pagination = ({ page, setPage }) => {
   return (
     <div className="pagination">
-      <a onClick={() => setPage(--page)}>&laquo;</a>
+     {/* for each number, we will set a new state to the pagination */}
+      <a onClick={() => setPage(--page)}>&laquo;</a> 
       <a className={`${page === 1 ? "active" : ""}`} onClick={() => setPage(1)}>
         1
       </a>

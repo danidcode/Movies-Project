@@ -17,6 +17,7 @@
     transition: background-color 0.3s;
   }
   
+  //The element with the class "active", it means he was the chosen one
   .pagination a.active {
     color:  rgb(231, 231, 231);
     background-color: rgb(161, 39, 39);

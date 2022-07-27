@@ -8,7 +8,6 @@
     flex-flow: row wrap;
     justify-content: center;
     padding: 1.5rem;
-    //   transition: 0.5s;
   }
   .movie {
     cursor: pointer;
@@ -55,7 +54,6 @@
       padding: 1rem;
       color: white;
       width: 100%;
-      /*     background-color: rgba(0, 0, 0, 0.4); */
       transition: background-color 1.5s ease;
     }
     &_title {

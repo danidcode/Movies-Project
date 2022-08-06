@@ -12,6 +12,7 @@ export default (state, action) => {
     payload = 1;
   }
 
+
   switch (type) {
     case GET_MOVIES:
       return {

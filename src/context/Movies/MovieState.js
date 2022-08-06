@@ -36,7 +36,7 @@ const MovieState = (props) => {
     });
   };
 
-  const setPage = async (page) => {
+  const setPage = (page) => {
     dispatch({
       type: "SET_PAGE",
       payload: page,

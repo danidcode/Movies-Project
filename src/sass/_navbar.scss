@@ -1,25 +1,29 @@
-@import 'variables';
+@import "variables";
 
-.navbar{
-z-index: 10000;
-position: fixed;
-top: 0px;
-width: 100%;
-background-color: $bg-color;
+.navbar {
+  z-index: 10000;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  background-color: $bg-color;
 
-.nav_links{
+  .nav_links {
     text-decoration: none;
     padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
     padding-top: 1rem;
-    color: white!important;
+    display: flex;
 
-    &_home{
-        color:rgb(231, 231, 231)!important;
+    &_home {
+      color: rgb(231, 231, 231) !important;
+    }
+    &_login {
+      margin-left: auto;
+      color: rgb(231, 231, 231) !important;
     }
 
-    &_home:hover{
-        color:rgb(197, 197, 197)!important;
+    &_home:hover {
+      color: rgb(197, 197, 197) !important;
     }
-
-}
+  }
 }

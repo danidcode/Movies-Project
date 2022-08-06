@@ -22,7 +22,7 @@ const Details = () => {
          {/* Conditional rendering because selectedMovie will be undefined until the request to the API ends */}
        {isLoading ? <Spinner animation="border" variant="secondary" /> :    
        
-      <><div className='detailsContainer'> <div className="details-movie_image_div">
+      <><div className='detailsContainer' data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine"> <div className="details-movie_image_div">
           <img src={IMG_API + selectedMovie.poster_path} alt="" className="details-movie_image" />
         </div><div className="details"> <div className="details-title"> <span className="details-title_span">{selectedMovie.title.toUpperCase()}</span> </div>
         <div className="details-genders"> {selectedMovie.genres.map((gen)=>{

@@ -6,7 +6,8 @@ const IMG_API = "https://image.tmdb.org/t/p/w500";
 const MovieCard = ({id,title, poster_path, release_date, popularity}) => { 
   return (
     
-      <div className='cards'>
+      <div className='cards' data-aos="fade-up"
+      data-aos-duration="500">
         <div className="card-content">
   
   <div className="movie">

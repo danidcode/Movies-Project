@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Details from "./components/Movies/Details"
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import MovieState from './context/Movies/MovieState';
+import Login from './components/Login';
+const project_name = "Movies-Project";
 function App() {
   return (
     // All the code will be inside the global context
@@ -13,9 +15,10 @@ function App() {
     <div className="container">
       <Navbar/>
       <Routes>
-      <Route exact  path='/' element={<Home/>}/>
+      <Route exact  path='/Movies-Project' element={<Home/>}/>
        {/* Passing the id of the movie as a parameter at url */}
-      <Route exact  path='/details/:id' element={<Details/>}/> 
+      <Route exact  path='Movies-Project/details/:id' element={<Details/>}/> 
+      <Route exact  path='Movies-Project/login' element={<Login/>}/> 
       </Routes>
     </div>
     </Router>

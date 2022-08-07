@@ -1,6 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import MovieLogo from "../movies_logo.webp";
+import movieContext from "../context/Movies/MovieContext";
+import Swal from "sweetalert2";
+import Spinner from "react-bootstrap/Spinner";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
 const Login = () => {
+  useEffect(() => {
+    generateToken();
+  }, []);
+
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [sendingForm, setSendingForm] = useState(false);
+  const { generateToken, sendLogin } = useContext(movieContext);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSendingForm(true);
+    let res = await sendLogin(name, password);
+    setSendingForm(false);
+    if (res === "logged") {
+    } else if (res == 400) {
+      MySwal.fire({
+        title: <p> An error has occurred</p>,
+        icon: "error",
+        text: "Try again",
+        confirmButtonText: "Ok",
+      });
+    } else if (res == 401) {
+    }
+  };
+
   return (
     <div className="layout-login">
       <div className="login">
@@ -9,7 +40,7 @@ const Login = () => {
         </div>
 
         <div className="login-content">
-          <div className="login-content-form">
+          <form className="login-content-form" onSubmit={handleSubmit}>
             <div className="login-content-form-group name">
               <input
                 type="input"
@@ -17,11 +48,11 @@ const Login = () => {
                 placeholder="Name"
                 name="name"
                 id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 required
               />
-              <label for="name" className="form__label">
-                Name
-              </label>
+              <label className="form__label">Name</label>
             </div>
             <div className="login-content-form-group password">
               <input
@@ -30,17 +61,23 @@ const Login = () => {
                 placeholder="Name"
                 name="name"
                 id="name"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
               />
-              <label for="name" className="form__label">
-                Password
-              </label>
+              <label className="form__label">Password</label>
             </div>
 
             <div>
-              <button className="login-content-form-button">Sing in</button>
+              {sendingForm ? (
+                <Spinner animation="border" variant="secondary" />
+              ) : (
+                <button type="submit" className="login-content-form-button">
+                  Sign in
+                </button>
+              )}
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

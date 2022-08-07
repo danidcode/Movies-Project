@@ -5,7 +5,10 @@ import Spinner from "react-bootstrap/Spinner";
 import MovieCard from "./Movies/MovieCard";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 const Home = () => {
+
+
   const { movies, getMovies, setPage, page } = useContext(movieContext);
   const [isLoading, setLoading] = useState(true);
 
@@ -21,8 +24,6 @@ const Home = () => {
 
     showMovies();
   }, [page]);
-
-  console.log(movies);
   return (
     <>
       {isLoading ? (

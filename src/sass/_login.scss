@@ -98,9 +98,9 @@
           border-radius: 999px;
           font-size: 1.2rem;
           padding: 7px 30px 7px 30px;
-          background-color:  #eeeeee;
+          background-color: #eeeeee;
         }
-        &-button:hover{
+        &-button:hover {
           background-color: $bg-color;
           color: #eeeeee;
           border-color: #eeeeee;
@@ -111,40 +111,35 @@
   }
 }
 
-
 // Breakpoints
 // Extra extra large
 @media (min-width: $xxl-min) {
-
 }
 
 // Extra large
 @media (min-width: $xl-min) and (max-width: $xl-max) {
-
 }
 
 // Large
 @media (min-width: $lg-min) and (max-width: $lg-max) {
- 
 }
 
 // Medium
 @media (min-width: $md-min) and (max-width: $md-max) {
-  
 }
 
 // Small
 @media (min-width: $sm-min) and (max-width: $sm-max) {
-  .login{
-    flex-direction: column!important;
-  
-    &-image{
-      width: 100%!important;
-    } 
-    &-content{
-      width: 100%!important;
+  .login {
+    flex-direction: column !important;
+
+    &-image {
+      width: 100% !important;
     }
-    .login-content-form-button{
+    &-content {
+      width: 100% !important;
+    }
+    .login-content-form-button {
       margin-bottom: 2rem;
       margin-top: 2rem;
     }
@@ -153,40 +148,37 @@
 
 // Extra small
 @media (max-width: $xs-max) {
-.login{
-  flex-direction: column!important;
+  .login {
+    flex-direction: column !important;
 
-  &-image{
-    width: 100%!important;
-  } 
-  &-content{
-    width: 100%!important;
-  }
-  .login-content-form-button{
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-  }
-}
-  }
-
-
-//Medium specifally
-@media (max-width: $md-max) {
-  .login{
-    flex-direction: column!important;
-  
-    &-image{
-      width: 100%!important;
-    } 
-    &-content{
-      width: 100%!important;
+    &-image {
+      width: 100% !important;
     }
-
-    .login-content-form-button{
+    &-content {
+      width: 100% !important;
+    }
+    .login-content-form-button {
       margin-bottom: 2rem;
       margin-top: 2rem;
     }
+  }
+}
 
-    
+//Medium specifally
+@media (max-width: $md-max) {
+  .login {
+    flex-direction: column !important;
+
+    &-image {
+      width: 100% !important;
+    }
+    &-content {
+      width: 100% !important;
+    }
+
+    .login-content-form-button {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
   }
 }

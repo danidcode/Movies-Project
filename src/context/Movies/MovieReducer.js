@@ -1,6 +1,7 @@
 import { GET_MOVIES } from "../Types";
 import { GET_MOVIE } from "../Types";
 import { SET_PAGE } from "../Types";
+import { SET_TOKEN } from "../Types";
 
 export default (state, action) => {
   let { payload, type } = action;
@@ -26,6 +27,10 @@ export default (state, action) => {
     case SET_PAGE:
       return {
         page: payload,
+      };
+      case SET_TOKEN:
+      return {
+       token: payload,
       };
   }
 };

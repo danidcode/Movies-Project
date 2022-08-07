@@ -9,6 +9,7 @@ const MovieState = (props) => {
     movies: [],
     selectedMovie: null,
     page: 1, //by default the first page will be 1
+    token: null,
   };
 
   const [state, dispatch] = useReducer(MovieReducer, initialState);
@@ -43,6 +44,35 @@ const MovieState = (props) => {
     });
   };
 
+  const generateToken = async () => {
+    const res = await axios.get(
+      `https://api.themoviedb.org/3/authentication/token/new?api_key=${API_KEY}`
+    );
+    dispatch({
+      type: "SET_TOKEN",
+      payload: res.data.request_token,
+    });
+  };
+
+  const sendLogin = async (name, password) => {
+    let loginRequest = {
+      username: name,
+      password: password,
+      request_token: state.token,
+    };
+    try {
+      let res = await axios.post(
+        `https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=${API_KEY}`,
+        loginRequest
+      );
+      if (res.status === 200) {
+        return "logged";
+      }
+    } catch (err) {
+      return err.response.status;
+    }
+  };
+
   return (
     <MovieContext.Provider //Provider which provides all of the global states and methods
       value={{
@@ -52,6 +82,8 @@ const MovieState = (props) => {
         setPage,
         getMovies,
         getOneMovie,
+        generateToken,
+        sendLogin,
       }}
     >
       {props.children}

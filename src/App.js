@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Details from "./components/Movies/Details";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MovieState from "./context/Movies/MovieState";
-import Login from "./components/Login";
 const project_name = "Movies-Project";
 function App() {
   return (
@@ -22,7 +21,7 @@ function App() {
               path="Movies-Project/details/:id"
               element={<Details />}
             />
-            <Route exact path="Movies-Project/login" element={<Login />} />
+      
           </Routes>
         </div>
       </Router>

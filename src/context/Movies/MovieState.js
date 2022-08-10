@@ -54,24 +54,6 @@ const MovieState = (props) => {
     });
   };
 
-  const sendLogin = async (name, password) => {
-    let loginRequest = {
-      username: name,
-      password: password,
-      request_token: state.token,
-    };
-    try {
-      let res = await axios.post(
-        `https://api.themoviedb.org/3/authentication/token/validate_with_login?api_key=${API_KEY}`,
-        loginRequest
-      );
-      if (res.status === 200) {
-        return "logged";
-      }
-    } catch (err) {
-      return err.response.status;
-    }
-  };
 
   return (
     <MovieContext.Provider //Provider which provides all of the global states and methods
@@ -83,7 +65,7 @@ const MovieState = (props) => {
         getMovies,
         getOneMovie,
         generateToken,
-        sendLogin,
+        
       }}
     >
       {props.children}

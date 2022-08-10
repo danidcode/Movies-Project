@@ -12,7 +12,7 @@ function App() {
     // this is how the components can communicate with each other
     <MovieState>
       <Router>
-        <div className="container">
+        <div className="container-app">
           <Navbar />
           <Routes>
             <Route exact path="/Movies-Project" element={<Home />} />

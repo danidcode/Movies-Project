@@ -3,7 +3,6 @@
 @import "navbar";
 @import "details";
 @import "card";
-@import "~bootstrap/scss/bootstrap";
 @import "paginate";
 @import "login";
 
@@ -16,10 +15,14 @@ body {
   padding: 0;
 }
 
-.container {
+.container-app {
   min-height: 100vh;
   background-color: $bg-color;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+img,svg{
+  vertical-align: middle;
 }

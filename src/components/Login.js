@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import MovieLogo from "../movies_logo.webp";
 import movieContext from "../context/Movies/MovieContext";
 import Swal from "sweetalert2";
-import Spinner from "react-bootstrap/Spinner";
 import withReactContent from "sweetalert2-react-content";
+import MoonLoader from "react-spinners/MoonLoader";
 const MySwal = withReactContent(Swal);
 const Login = () => {
   useEffect(() => {
@@ -70,7 +70,10 @@ const Login = () => {
 
             <div>
               {sendingForm ? (
-                <Spinner animation="border" variant="secondary" />
+                <MoonLoader
+                color="rgb(231, 231, 231)"
+                size={35}
+              />
               ) : (
                 <button type="submit" className="login-content-form-button">
                   Sign in

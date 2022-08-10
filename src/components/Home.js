@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import Pagination from "./Pagination";
 import movieContext from "../context/Movies/MovieContext";
-import Spinner from "react-bootstrap/Spinner";
 import MovieCard from "./Movies/MovieCard";
+import MoonLoader from "react-spinners/MoonLoader";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -27,7 +27,11 @@ const Home = () => {
   return (
     <>
       {isLoading ? (
-        <Spinner animation="border" variant="secondary" />
+        
+<MoonLoader
+  color="rgb(231, 231, 231)"
+  size={35}
+/>
       ) : (
         <div className="layout">
           <div className="homeContainer">

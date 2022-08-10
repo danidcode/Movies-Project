@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import movieContext from "../../context/Movies/MovieContext";
 import { useParams } from "react-router-dom";
-import Spinner from "react-bootstrap/Spinner";
+import MoonLoader from "react-spinners/MoonLoader";
 const IMG_API = "https://image.tmdb.org/t/p/w500";
 
 const Details = () => {
@@ -18,7 +18,10 @@ const Details = () => {
     <>
       {/* Conditional rendering because selectedMovie will be undefined until the request to the API ends */}
       {isLoading ? (
-        <Spinner animation="border" variant="secondary" />
+        <MoonLoader
+        color="rgb(231, 231, 231)"
+        size={35}
+      />
       ) : (
         <>
           <div

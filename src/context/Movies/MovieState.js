@@ -10,6 +10,7 @@ const MovieState = (props) => {
     selectedMovie: null,
     page: 1, //by default the first page will be 1
     token: null,
+    isLoading: true
   };
 
   const [state, dispatch] = useReducer(MovieReducer, initialState);
@@ -20,7 +21,7 @@ const MovieState = (props) => {
       `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&page=${state.page}`
     );
 
-    dispatch({
+      dispatch({
       type: "GET_MOVIES",
       payload: res.data.results,
     });
@@ -38,6 +39,7 @@ const MovieState = (props) => {
   };
 
   const setPage = (page) => {
+    console.log(page);
     dispatch({
       type: "SET_PAGE",
       payload: page,
@@ -73,17 +75,29 @@ const MovieState = (props) => {
     }
   };
 
+  const setLoading = (value) =>{
+    console.log("loading value:" + value);
+      dispatch({
+      type: "SET_LOADING",
+      payload: value,
+    });
+  }
+
+  
   return (
     <MovieContext.Provider //Provider which provides all of the global states and methods
       value={{
         movies: state.movies,
         selectedMovie: state.selectedMovie,
         page: state.page,
+        isLoading: state.isLoading,
         setPage,
         getMovies,
         getOneMovie,
         generateToken,
         sendLogin,
+        setLoading
+        
       }}
     >
       {props.children}

@@ -5,6 +5,7 @@
 @import "card";
 @import "paginate";
 @import "login";
+@import "footer";
 
 * {
   box-sizing: border-box;
@@ -21,8 +22,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-img,svg{
+img,
+svg {
   vertical-align: middle;
 }

@@ -1,8 +1,10 @@
-import React from "react";
-
+import React, { useContext } from "react";
+import movieContext from "../context/Movies/MovieContext";
 const Pagination = ({ page, setPage }) => {
+  const {setLoading} = useContext(movieContext);
   return (
-    <div className="pagination">
+    <div className="pagination" data-aos="fade-up"
+    data-aos-duration="500" onClick={()=> setLoading(true)}> 
      {/* for each number, we will set a new state to the pagination */}
       <a onClick={() => setPage(--page)}>&laquo;</a> 
       <a className={`${page === 1 ? "active" : ""}`} onClick={() => setPage(1)}>

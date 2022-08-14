@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { Link } from 'react-router-dom';
-import {AiOutlineEye} from 'react-icons/ai'
+import {AiOutlineEye} from 'react-icons/ai';
+import movieContext from "../../context/Movies/MovieContext";
+import { SET_LOADING } from "../../context/Types";
 const IMG_API = "https://image.tmdb.org/t/p/w500";
 
 const MovieCard = ({id,title, poster_path, release_date, popularity}) => { 
+  const {  setLoading} = useContext(movieContext);
   return (
     
       <div className='cards' data-aos="fade-up"
@@ -21,7 +24,7 @@ const MovieCard = ({id,title, poster_path, release_date, popularity}) => {
       
       <div className="movie_details-content">
         {/* Passing the id to the next screen */}
-      <Link to={`details/${id}`} > View <AiOutlineEye size={25}/> </Link> 
+      <Link to={`details/${id}`} onClick={()=>setLoading(true)} > View <AiOutlineEye size={25}/> </Link> 
       </div>
     </div>
   </div>

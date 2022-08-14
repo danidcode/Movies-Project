@@ -5,13 +5,18 @@ import MoonLoader from "react-spinners/MoonLoader";
 const IMG_API = "https://image.tmdb.org/t/p/w500";
 
 const Details = () => {
-  const { getOneMovie, selectedMovie } = useContext(movieContext);
-  const [isLoading, setLoading] = useState(true);
+  const { getOneMovie, selectedMovie, isLoading,setLoading } = useContext(movieContext);
   //Getting the id from the url
   const { id } = useParams();
   useEffect(() => {
+
     //While getOneMovie is retrieving the data from the API, The page will be loading
-    getOneMovie(id).then(() => setLoading(false));
+    const showMovie = async (id) =>{
+      await getOneMovie(id);
+      setLoading(false);
+    }
+
+    showMovie(id);
   }, []);
 
   return (

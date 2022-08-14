@@ -5,6 +5,7 @@ import Details from "./components/Movies/Details";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MovieState from "./context/Movies/MovieState";
 import Login from "./components/Login";
+import Footer from "./components/Footer";
 const project_name = "Movies-Project";
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             />
             <Route exact path="Movies-Project/login" element={<Login />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </MovieState>

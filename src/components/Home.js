@@ -7,31 +7,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Home = () => {
-
-
-  const { movies, getMovies, setPage, page } = useContext(movieContext);
-  const [isLoading, setLoading] = useState(true);
-
+  const { movies, getMovies, setPage, page, setLoading, isLoading } =
+    useContext(movieContext);
   useEffect(() => {
     AOS.init();
     AOS.refresh();
-    setLoading(true);
-
     const showMovies = async () => {
       await getMovies();
       setLoading(false);
     };
-
     showMovies();
   }, [page]);
+  console.log(isLoading);
   return (
     <>
       {isLoading ? (
-        
-<MoonLoader
-  color="rgb(231, 231, 231)"
-  size={35}
-/>
+        <MoonLoader color="rgb(231, 231, 231)" size={35} />
       ) : (
         <div className="layout">
           <div className="homeContainer">

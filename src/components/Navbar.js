@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="nav_links">
         <Link className="nav_links_home" to="/Movies-Project" onClick={()=>setLoading(true)}>
           {" "}
-          <AiOutlineHome size={60} />{" "}
+          <AiOutlineHome size={55} />{" "}
         </Link>
         <Link className="nav_links_login" to="/Movies-Project/login"  onClick={()=>setLoading(true)}>
           {" "}

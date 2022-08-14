@@ -8,9 +8,9 @@ const Footer = () => {
   const { isLoading } = useContext(movieContext);
   return (
     <>
-    {isLoading ? null :<div className="footer" data-aos="fade-up"
-    data-aos-duration="500"
-     data-aos-offset="0"
+    {isLoading ? null :<div className="footer"  data-aos="fade-right"
+            data-aos-offset="0"
+            data-aos-easing="ease-in-sine"
      >
       <div className="footer-icons" >
         <div className="footer-icons-linkedin">
